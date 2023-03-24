@@ -1,0 +1,50 @@
+*{
+    padding: 0;
+    margin: 0; 
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background: linear-gradient(to right, #99E89D, #73C883, #4DA748, #26874E, #006633);
+}
+
+p{
+    background: white;
+    display: flex;
+    justify-content: center;
+    max-height: 10rem;
+    border-bottom: 3px black solid;
+    font-size: 10rem;
+    gap: 3rem;
+    font-family: 'Bebas Neue', sans-serif;
+    margin-bottom: 2rem;
+}
+
+
+
+p > img{
+    max-width: 7rem;
+}
+
+body > article {
+    display: flex;
+    justify-content: center;
+    gap: 7%;
+}
+
+body > article > p {
+    background: white;
+    border-radius: 10%;
+    border: 3px black solid;
+    min-height: 16vw;
+    min-width: 25%;
+}
+
+article > p {
+    padding-left: 2rem;
+    font-size: 5rem;
+    justify-content: left;
+}
