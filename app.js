@@ -13,7 +13,7 @@ setInterval(displayDateTime, 1000);
 
 const url = 'https://api.weatherapi.com/v1/forecast.json?key=45680b65ce154fdbb0995703232803&q=Amsterdam&days=7';
 
-const daysOfWeek = ['Zo', 'Ma', 'Di', 'Wo', 'Do', 'Vr', 'Za'];
+const daysOfWeek = ['Zondag', 'Maandag', 'Dinsdag', 'Woensdag', 'Donderdag', 'Vrijdag', 'Zaterdag'];
 
 const conditionEmojiMap = {
   'Sunny': '☀',
