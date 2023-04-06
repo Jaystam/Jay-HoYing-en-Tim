@@ -36,8 +36,15 @@ const conditionEmojiMap = {
 fetch(url)
   .then(response => response.json())
   .then(data => {
-    const forecast = data.forecast.forecastday;
+    
+    const temp = data.current.temp_c;
+      const feelsLike = data.current.feelslike_c;
+      document.getElementById('buiten-temp').textContent = 'buiten temperatuur: ' + temp + ' °C';
+      document.getElementById('gevoel-buiten-temp').textContent = 'gevoels temperatuur: ' + feelsLike + ' °C';
+    
+      const forecast = data.forecast.forecastday;
     forecast.forEach((day, index) =>  {
+
       const date = new Date(day.date);
       const dayOfWeek = daysOfWeek[date.getDay()];
       const condition = day.day.condition.text;
