@@ -39,9 +39,7 @@ fetch(url)
     
     const temp = data.current.temp_c;
       const feelsLike = data.current.feelslike_c;
-      document.getElementById('buiten-temp').textContent = 'buiten temperatuur: ' + temp + ' °C';
-      document.getElementById('gevoel-buiten-temp').textContent = 'gevoels temperatuur: ' + feelsLike + ' °C';
-    
+      document.getElementById('buiten-temp').textContent = 'de buiten tempratuur vandaag: ' + temp + ' °C';  
       const forecast = data.forecast.forecastday;
     forecast.forEach((day, index) =>  {
 
