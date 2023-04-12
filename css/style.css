@@ -43,6 +43,20 @@ body > article {
     height: 100%;
 }
 
+.weather{
+    padding: 1.5rem;
+    font-size: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.weer > p{
+    padding: 0.5rem;
+    font-size: 3rem;
+    border-top: 2px black solid;
+}
+
 .weertext{
     font-size: 2rem;
     height: 12%;
@@ -96,7 +110,7 @@ body > article {
 
 .card-2{
     grid-column: 5/9;
-    grid-row: 1/7;  
+    grid-row: 1/7;
 }
 
 .card-3{
