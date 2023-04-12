@@ -24,6 +24,17 @@ fetch(url)
     conditionsElement.innerText = data.weather[0].description;
 });
 
+function readTemp() {
+  fetch('./jsonInput.json')
+  .then(response => response.json())
+  .then(data => {
+    console.log(data.Temperature);
+    document.getElementById("info-temperatur").textContent = "temperatuur: " + Math.round(data.Temperature) + " °C";
+  });
+}
+
+setInterval(readTemp, 1000)
+
 
 const api_key = '7f581fc794012855ba54015c5674c225';
 
