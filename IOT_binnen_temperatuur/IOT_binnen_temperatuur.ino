@@ -15,7 +15,7 @@ int LDR_In = A0;
 uint8_t Led1 = D3;
 uint8_t Led2 = D5;
 uint8_t Led3 = D6;
-int LHH;
+int Light;
 bool led1status = false;
 bool led2status = false;
 bool led3status = false;
@@ -55,7 +55,7 @@ void readDHT11(){
   float humidity = round(dht.readHumidity()*10)/10; // Gets the values of the humidity
   temperature_kelvin = temperature + 273;
   float heatindex = round(dht.computeHeatIndex( Temperature, Humidity, false)*10)/10;
-  LHH = analogRead(LDR_In); 
+  Light = analogRead(LDR_In); 
         
   if(isnan(temperature) || isnan(humidity) || isnan(heatindex) || isnan(temperature_kelvin)){
     Serial.println("DHT11 sensor error");
@@ -72,7 +72,7 @@ void readDHT11(){
     Serial.println(humidity);
     Serial.print("% Heatindex ");
     Serial.println(heatindex);
-    Serial.println(LHH);
+    Serial.println(Light);
     Serial.println(temperature_kelvin);
   }
 }
@@ -92,7 +92,7 @@ void generateJson(){
   doc["Led1"] = led1status;
   doc["Led2"] = led2status;
   doc["Led3"] = led3status;
-  doc["Licht"] = LHH;
+  doc["Licht"] = Light;
   serializeJson(doc, jsonOut);
 }
 
