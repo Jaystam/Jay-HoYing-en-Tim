@@ -89,6 +89,13 @@ body > article {
     min-width: 100%;
 }
 
+.info-temp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+}
+
 .tempratuur-text{
     font-size: 5rem;
 }
